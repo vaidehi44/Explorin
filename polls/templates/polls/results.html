@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote counts</title>
+    <style>
+        body {
+            background-color: rgb(241, 188, 248);
+            padding:50px;
+            font-family: Arial;
+        }
+        h2 {
+            margin:20px;
+            background-color: rgb(84, 19, 87);
+            color:rgb(223, 211, 211);
+            padding:20px;
+            border-radius: 5px;
+        }
+        li {
+            margin: 20px;
+            color:rgb(27, 24, 24);
+        }
+        div p{
+            margin:40px;
+            color: rgb(66, 168, 97);
+            font-size:20px;
+        }
+        a {
+            color: rgb(66, 168, 97);
+
+        }
+        a:hover {
+            color:rgb(27, 24, 24);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>{{ question.question_text }}</h2>
+
+    <ul>
+    {% for choice in question.choice_set.all %}
+        <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+    {% endfor %}
+    </ul>
+
+<div><p>Want to vote again? Click <a href="{% url 'polls:detail' question.id %}">here.</a></p></div>
+</body>
+</html>
+

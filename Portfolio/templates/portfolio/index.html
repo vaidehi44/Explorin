@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="{% static '/portfolio/CSS/home.css' %}" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/f91dab228a.js"></script>
+</head>
+
+<body>
+    
+    <div class="main">  
+        <div class="logo">
+            <a href="{% url 'portfolio:home' %}"><img id="exp" src="{% static '/portfolio/images/explorin_logo.png' %}" width=150px height=50px></a>
+        </div>  
+        <div class="content">
+            <img id="image" src="{% static '/portfolio/images/image.jpg' %}" height=220px weight=220px>
+
+            <h1>Vaidehi Atpadkar</h1>
+            <p>SOFTWARE DEVELOPMENT EXPLORATION PROGRAM</p>
+
+            <div class="nav">
+                <a href="{% url 'portfolio:about' %}">ABOUT</a>
+                <a href="{% url 'portfolio:projects' %}">PROJECTS</a>
+                <a href="{% url 'portfolio:contact' %}">CONTACTS</a>
+            </div>
+
+            <div class="social">
+                <a href="#">
+                <i class="fab fa-google-plus-g fa-2x" ></i>
+                </a>
+                <a href="https://www.facebook.com/vaidehi.atpadkar.9">
+                <i class="fab fa-facebook-square fa-2x" ></i>
+                </a>
+                <a href="https://www.linkedin.com/in/vaidehi-atpadkar-2755771b2/">
+                <i class="fab fa-linkedin fa-2x" ></i>
+                </a>
+                <a href="#">
+                <i class="fas fa-envelope fa-2x" ></i>
+                </a>
+                <a href="#">
+                <i class="fab fa-instagram fa-2x" ></i>
+                </a>
+            </div>
+
+        </div>
+        
+        <div class="design"></div>
+        <div class="design2"></div>
+
+        <div class="insta"> 
+            <p>Link to </p><br>
+            <h3><a href="{% url 'app:signup' %}" >Instagram</a></h3><br>
+            <p>the master project</p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choices</title>
+    <style>
+        body {
+            background-color: rgb(241, 188, 248);
+            padding:50px;
+            font-family: Arial;
+        }
+        h2 {
+            margin:20px;
+            background-color: rgb(84, 19, 87);
+            color:rgb(223, 211, 211);
+            padding:20px;
+            border-radius: 5px;
+        }
+        input, label {
+            margin:15px;
+            color:rgb(27, 24, 24);
+        }
+
+        input {
+            margin:30px;
+            padding: 8px;
+            background-color: rgb(53, 138, 53);
+            color: rgb(194, 182, 182);
+        }
+
+    </style>
+</head>
+<body>
+    <h2>{{ question.question_text }}</h2>
+
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+    <form action="{% url 'polls:vote' question.id %}" method="post">
+    {% csrf_token %}
+    {% for choice in question.choice_set.all %}
+        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+        <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+    {% endfor %}
+    <input type="submit" value="Vote">
+    </form>
+</body>
+</html>
+

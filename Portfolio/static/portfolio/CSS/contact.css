@@ -5,8 +5,7 @@ body {
 
 }
 .big_container{
-    overflow-x:scroll;
-    overflow-y:hidden;
+    overflow:hidden;
     padding:0px;
     display:flex;
     flex-direction: column;
@@ -102,6 +101,10 @@ footer a{
     color:rgb(51, 50, 50);
 }
 
+footer a i{
+    font-size: 30px;
+}
+
 div.container {
     margin:0;
     position:relative;
@@ -128,6 +131,7 @@ div.design2 {
     transform: rotate(-3deg);/*rotation*/
     bottom: -80px;
     left: -25px;
+    display:none;
 
 } 
 
@@ -164,17 +168,27 @@ div.design2 {
     }
 }
 @media only screen and (max-width: 500px) {
+
+    div.design2 {
+        height: 170px;
+        transform: rotate(-3deg);/*rotation*/
+        bottom: -70px;
+        left: -25px;
+    } 
     .main {
         position:relative;
         margin: 0;
         padding: 0px;
         padding-right:0;
         width:90%;
+        display:flex;
+        flex-direction:column;
+        word-wrap:break-word;
 
     }
     .main h1 {
         margin:50px;
-        margin-bottom: 35px;
+        margin-bottom: 5px;
         font-weight:normal;
         font-size:23px;
     }
@@ -186,15 +200,30 @@ div.design2 {
     .main ul {
         width:90%;
         margin-left: 15px;
+        margin-top:10px;
 
     }
     
     li {
-        margin: 17px;
-        font-size: 16px;
+        margin: 14px;
+        font-size: 14px;
     }
     span {
         color: rgb(88, 145, 219);
+    }
+    footer {
+        padding: 15px;
+        padding-bottom:15px;
+        padding-top:0;
+
+    }
+
+    footer a i{
+        font-size: 20px;
+    }
+    footer a{
+        margin: 12px;
+       
     }
   
 }

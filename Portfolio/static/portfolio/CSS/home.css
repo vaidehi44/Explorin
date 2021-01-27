@@ -2,6 +2,8 @@ body {
     font-family: Verdana, Tahoma, sans-serif;
     margin:0;
     background-color: rgb(226, 230, 236);
+    padding-bottom:0;
+
 }
 div.logo{
     padding: 7px;
@@ -69,6 +71,10 @@ h1:after {
     text-decoration: none;
     color: rgb(54, 53, 53);
 }
+.social a i{
+    font-size: 30px;
+}
+
 div.design {
     height:2000px;
     width: 600px;
@@ -79,17 +85,20 @@ div.design {
     top:-400px;
     bottom:0px;
     left:-300px;
+    display:none;
+
 }
 
 div.design2 {
-    height: 200px;
+    height: 180px;
     width: 1500px;
     background:rgb(174, 200, 202);
     position: absolute;
     z-index:2;
     transform: rotate(4deg);/*rotation*/
-    bottom: -105px;
+    bottom: -80px;
     left: -25px;
+    display:none;
 } 
 
 .insta {
@@ -130,7 +139,7 @@ div.design2 {
         height: 200px;
         width: 1500px;
         transform: rotate(4deg);/*rotation*/
-        bottom: -135px;
+        bottom: -105px;
         left: -25px;
     }
 
@@ -163,6 +172,10 @@ div.design2 {
         bottom:0px;
         left:-300px;
     }
+    div.design2 {
+        height: 190px;
+        bottom: -115px;
+    }
 
 }
 @media only screen and (max-width: 960px) {
@@ -178,6 +191,10 @@ div.design2 {
         bottom:0px;
         left:-300px;
     }
+    div.design2 {
+        height: 180px;
+        bottom: -115px;
+    }
 
 }
 @media only screen and (max-width: 830px) {
@@ -192,6 +209,13 @@ div.design2 {
         top:-400px;
         bottom:0px;
         left:-300px;
+    }
+    div.design2 {
+        height: 180px;
+        width: 1500px;
+        transform: rotate(3deg);/*rotation*/
+        bottom: -115px;
+        left: -25px;
     }
 
 }
@@ -268,6 +292,13 @@ div.design2 {
         position:relative;
         z-index:3;
     }
+    .social a i{
+        font-size: 22px;
+    }
+    .social a{
+        margin: 9px;
+       
+    }
 
 }
 @media only screen and (max-width: 354px) {
@@ -337,6 +368,13 @@ div.design2 {
         margin-top:0;
         font-size:13px;
     }
+    .social a i{
+        font-size: 18px;
+    }
+    .social a{
+        margin: 8px;
+       
+    }
     
 }
 @media only screen and (max-width: 220px) {
@@ -364,6 +402,13 @@ div.design2 {
         text-decoration: none;
         font-size: 12px;
         color: rgb(17, 71, 64);
+    }
+    .social a i{
+        font-size: 16px;
+    }
+    .social a{
+        margin: 5px;
+       
     }
 }
 

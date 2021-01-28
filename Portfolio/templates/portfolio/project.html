@@ -7,16 +7,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
+    <script src="https://kit.fontawesome.com/f91dab228a.js"></script>
     <link href="{% static '/portfolio/CSS/project.css' %}" rel="stylesheet" type="text/css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+
 </head>
 
 <body>
     <div class="nav">
         <a href="{% url 'portfolio:home' %}"><img id="exp" src="{% static '/portfolio/images/explorin_logo.png' %}" width=150px height=50px></a>
         <div class="tabs">
-            <a href="{% url 'portfolio:about' %}"><div >ABOUT</div></a>
-            <a class="current" href="{% url 'portfolio:projects' %}"><div>PROJECTS</div></a>
-            <a href="{% url 'portfolio:contact' %}"><div>CONTACTS</div></a>
+            <i id="toggler" class="fa fa-bars fa-lg" style="color:rgb(100, 130, 168)" aria-hidden="true"></i>
+            <div id="nav-box">
+                <a href="{% url 'portfolio:about' %}"><div >ABOUT</div></a>
+                <a class="current" href="{% url 'portfolio:projects' %}"><div>PROJECTS</div></a>
+                <a href="{% url 'portfolio:contact' %}"><div>CONTACTS</div></a>
+            </div>
         </div>
     </div>
 
@@ -27,7 +33,7 @@
 
         <div class="content">
             <div class="task">
-                <a href="tasks/flexbox"><h3>Flexbox</h3></a>
+                <a href="{% url 'portfolio:flexbox' %}"><h3>Flexbox</h3></a>
                 <div class="day">
                     <p>DAY 3 Task</p>
                 </div>
@@ -50,7 +56,7 @@
             </div>
 
             <div class="task">
-                    <a href="tasks/calculator"><h3>Calculator</h3></a>
+                    <a href="{% url 'portfolio:calculator' %}"><h3>Calculator</h3></a>
                     <div class="day">
                         <p>DAY 4 Task</p>
                     </div>
@@ -75,7 +81,7 @@
 
             <div class="task">
             
-                <a href="tasks/website"><h3>My First Website <span>| Thanks to explorin</span></h3></a>
+                <a href="{% url 'portfolio:website' %}"><h3>My First Website <span>| Thanks to explorin</span></h3></a>
                 <div class="day">
                     <p>WEEK 1 Task</p>
                 </div>
@@ -101,7 +107,7 @@
 
             <div class="task">
             
-                <a href="tasks/SQL"><h3>SQL</h3></a>
+                <a href="{% url 'portfolio:sql' %}"><h3>SQL</h3></a>
                 <div class="day">
                     <p>DAY 9 Task</p>
                 </div>
@@ -128,7 +134,7 @@
 
             <div class="task">
             
-                <a href="tasks/flex_adv"><h3>Flexbox Advance</h3></a>
+                <a href="{% url 'portfolio:flex_adv' %}"><h3>Flexbox Advance</h3></a>
                 <div class="day">
                     <p>DAY 11 Task</p>
                 </div>
@@ -155,7 +161,7 @@
 
             <div class="task">
             
-                <a href="tasks/api"><h3>Youtube API</h3></a>
+                <a href="{% url 'portfolio:api' %}"><h3>Youtube API</h3></a>
                 <div class="day">
                     <p>DAY 11 Task</p>
                 </div>
@@ -182,7 +188,7 @@
 
             <div class="task">
             
-                <a href="tasks/login"><h3>My First Login Page</h3></a>
+                <a href="{% url 'portfolio:login_page' %}"><h3>My First Login Page</h3></a>
                 <div class="day">
                     <p>DAY 12 Task</p>
                 </div>
@@ -265,6 +271,37 @@
 
       
     </div>
+
+    <script>
+
+        $( document ).ready(function() {
+        
+            let display=false
+            $("#toggler").on('click', function() {
+        
+                if(display === false){
+                    display = true;
+                    $("#nav-box").slideDown("slow");
+        
+                    $(this).removeClass("fa fa-bars");
+        
+                    $(this).addClass("fa fa-times");
+        
+                }
+                else{
+                    display = false;
+                    $("#nav-box").slideUp("slow");
+        
+                    $(this).removeClass("fa fa-times");
+        
+                    $(this).addClass("fa fa-bars");
+        
+                }
+        
+            })
+        
+        })
+        </script>
 
 </body>
 </html>

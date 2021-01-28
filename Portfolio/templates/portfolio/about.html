@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link href="{% static '/portfolio/CSS/about.css' %}" rel="stylesheet" type="text/css">
-
+    <script src="https://kit.fontawesome.com/f91dab228a.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -18,9 +18,12 @@
     <div class="nav">
         <a href="{% url 'portfolio:home' %}"><img id="exp" src="{% static '/portfolio/images/explorin_logo.png' %}" width=150px height=50px></a>
         <div class="tabs">
-            <a class="current" href="{% url 'portfolio:about' %}"><div >ABOUT</div></a>
-            <a href="{% url 'portfolio:projects' %}"><div>PROJECTS</div></a>
-            <a href="{% url 'portfolio:contact' %}"><div>CONTACTS</div></a>
+            <i id="toggler" class="fa fa-bars fa-lg" style="color:rgb(100, 130, 168)" aria-hidden="true"></i>
+            <div id="nav-box">
+                <a class="current" href="{% url 'portfolio:about' %}"><div >ABOUT</div></a>
+                <a href="{% url 'portfolio:projects' %}"><div>PROJECTS</div></a>
+                <a href="{% url 'portfolio:contact' %}"><div>CONTACTS</div></a>
+            </div>
         </div>
     </div>
 
@@ -84,6 +87,36 @@
 
 <script>
     $( "#accordion" ).accordion({heightStyle: "content",active: false, collapsible:true});
+</script>
+<script>
+
+$( document ).ready(function() {
+
+    let display=false
+    $("#toggler").on('click', function() {
+
+        if(display === false){
+            display = true;
+            $("#nav-box").slideDown("slow");
+
+            $(this).removeClass("fa fa-bars");
+
+            $(this).addClass("fa fa-times");
+
+        }
+        else{
+            display = false;
+            $("#nav-box").slideUp("slow");
+
+            $(this).removeClass("fa fa-times");
+
+            $(this).addClass("fa fa-bars");
+
+        }
+
+    })
+
+})
 </script>
 
 </body>

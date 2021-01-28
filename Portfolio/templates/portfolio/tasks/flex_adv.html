@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='{% static "/portfolio/CSS/flex_adv.css" %}'>
+    <title>Flexbox Advance</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class='container'>
+        <div class='item1'>Header</div>
+
+        <div class='flex-con4'>
+            <div class='flex-con1'>
+                <div class='item2'>Hero</div>
+                <div class='item4'>Sidebar</div>
+            </div>
+            <div class='flex-con2'>
+                <div class='item3'>Main-content</div>
+                <div class='item5'>Extra content</div>
+            </div>
+        </div>
+        <div class='flex-con3'>
+            <div class='item6'><p>Related images</p></div>
+            <div class='item7'>Related Posts</div>
+        </div>
+        <div class='item8'>Footer</div>
+
+    </div>
+
+    <script>
+        $(document).ready( function() {
+
+            $(".item2").hover(function() {//this function would swap colors when mouse goes over item2('hero')
+                var item2_color=$(this).css("background-color");//storing color of item2 in variable
+                var item4_color=$(".item4").css("background-color");//storing color of item4 in variable
+                $(this).css("background-color",item4_color);
+                $(".item4").css("background-color",item2_color)
+            },
+                function() {
+                    var item2_color=$(this).css("background-color");//this function would swap colors when mouse gets off item2('hero')
+                    var item4_color=$(".item4").css("background-color");
+                    $(this).css("background-color",item4_color);
+                    $(".item4").css("background-color",item2_color)
+            });
+
+            $(".item4").hover(function() {//this function would swap colors when mouse goes over item4('sidebar')
+                var item4_color=$(this).css("background-color");
+                var item2_color=$(".item2").css("background-color");
+                $(this).css("background-color",item2_color);
+                $(".item2").css("background-color",item4_color)
+            },
+                function() {//this function would swap colors when mouse gets off item4('sidebar')
+                    var item4_color=$(this).css("background-color");
+                    var item2_color=$(".item2").css("background-color");
+                    $(this).css("background-color",item2_color);
+                    $(".item2").css("background-color",item4_color)
+                
+                });
+
+            $(".item6").click(function() {
+                $(".item6 p").css("visibility","hidden");//hiding the text 'related images'
+                var img_url = '{% static "/portfolio/images/tasks/jquery.jpg" %}';
+                $(this).css({"background-image":"url("+img_url+")","background-size":"cover","background-position":"right center"
+                });//setting image as background
+            });
+
+            $(".item1").click(function() {
+                $(".item3").append("<p style='color:red'>This text has been added after clicking on the header.</p>");
+                    });//appending the text as 'header' is clicked
+
+                });
+                
+    </script>
+
+</body>
+
+</html>

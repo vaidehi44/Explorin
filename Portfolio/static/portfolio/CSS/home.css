@@ -55,6 +55,7 @@ h1:after {
 .nav {
     margin: 40px;
     margin-bottom: 50px;
+
 }
 .nav a {
     margin:15px;
@@ -105,26 +106,22 @@ div.design2 {
     position:absolute;
     right:30px;
     top:30px;
-    border: 1px solid rgb(144, 170, 209);
+    border: 1px solid rgb(121, 143, 175);
     border-radius:5px;
-    background-color:rgb(203, 228, 211);
-    padding:20px;
-    z-index:100;
+    background-color: rgb(199, 221, 216);
+    padding:10px;
     text-align:center;
+    
 
 }
-.insta h3 {
+.insta b {
+    font-size:20px;
     margin:0;
-    margin-top: -15px;
-    margin-bottom: -15px;
-    text-decoration: underline solid black;
-    font-weight: normal;
-
+    text-decoration:underline 1px rgb(72, 72, 138);
 }
-.insta p{
-    margin:0;
-    margin-top:0;
+.insta pre{
     font-size:15px;
+    margin:0;
 }
 .insta a{
     text-decoration:none;
@@ -134,132 +131,46 @@ div.design2 {
     text-decoration:none;
     color:rgb(109, 155, 199);
 }
-@media only screen and (max-width: 1450px) {
-    div.design2 {
-        height: 200px;
-        width: 1500px;
-        transform: rotate(4deg);/*rotation*/
-        bottom: -105px;
-        left: -25px;
-    }
 
-}
-@media only screen and (max-width: 1250px) {
-    
-    div.design {
-        height:2000px;
-        width: 560px;
-        background-color:rgb(196, 228, 207);
-        transform: rotate(13deg);/*rotation*/
-        position: absolute;
-        z-index:2;
-        top:-400px;
-        bottom:0px;
-        left:-300px;
-    }
 
-}
-@media only screen and (max-width: 1090px) {
-    
-    div.design {
-        height:2000px;
-        width: 530px;
-        background-color:rgb(196, 228, 207);
-        transform: rotate(13deg);/*rotation*/
-        position: absolute;
-        z-index:2;
-        top:-400px;
-        bottom:0px;
-        left:-300px;
-    }
-    div.design2 {
-        height: 190px;
-        bottom: -115px;
-    }
-
-}
-@media only screen and (max-width: 960px) {
-    
-    div.design {
-        height:2000px;
-        width: 500px;
-        background-color:rgb(196, 228, 207);
-        transform: rotate(13deg);/*rotation*/
-        position: absolute;
-        z-index:2;
-        top:-400px;
-        bottom:0px;
-        left:-300px;
-    }
-    div.design2 {
-        height: 180px;
-        bottom: -115px;
-    }
-
-}
-@media only screen and (max-width: 830px) {
-    
-    div.design {
-        height:2000px;
-        width: 450px;
-        background-color:rgb(196, 228, 207);
-        transform: rotate(13deg);/*rotation*/
-        position: absolute;
-        z-index:2;
-        top:-400px;
-        bottom:0px;
-        left:-300px;
-    }
-    div.design2 {
-        height: 180px;
-        width: 1500px;
-        transform: rotate(3deg);/*rotation*/
-        bottom: -115px;
-        left: -25px;
-    }
-
-}
 @media only screen and (max-width: 600px) {
-    div.design {
-        height:2000px;
-        width: 350px;
-        background-color:rgb(196, 228, 207);
-        transform: rotate(11deg);/*rotation*/
-        position: absolute;
-        z-index:2;
-        top:-400px;
-        bottom:0px;
-        left:-300px;
-    }
-    div.design2 {
-        height: 180px;
-        width: 1500px;
-        transform: rotate(3deg);/*rotation*/
-        bottom: -135px;
-        left: -25px;
+    .main {
+        padding:10px;
     }
     
     .insta {
-        position:absolute;
-        right:50%;
-        transform: translate(50%);
-        top:80px;
-        border: 1px solid rgb(144, 170, 209);
-        border-radius:5px;
-        background-color:rgb(203, 228, 211);
+        text-align:center;
+        position:static;
+        max-width: 360px;
         padding:7px;
-        z-index:100;
+        margin: 0px;
+        display:block;
+        margin-right:auto;
+        margin-left:auto;
+        margin-top:20px;
+        margin-bottom:0;
+        
     }
-    
+    .insta pre{
+        white-space:initial;
+        font-size: 10px;
+    }
+    .insta b {
+        font-size:17px;
+    }
+    .insta pre{
+        font-size:15px;
+    }
+
     #image{
         width:150px;
         height:150px;
         position:relative;
-        top:60px;
+        top:0px;
 
     }
     h1{
-        font-size:26px;
+        font-size:22px;
         margin-top:20px;
         position:relative;
         top:25px;
@@ -268,8 +179,8 @@ div.design2 {
     h1:after {
         content:"";
         position: absolute;
-        width:40%;
-        left: 30%;
+        width:60%;
+        left: 20%;
         height: 40px;
         border-bottom: 1px solid rgb(64, 99, 93);
     }
@@ -277,7 +188,8 @@ div.design2 {
         padding-top:10px;
         letter-spacing: 0px;
         word-spacing: 5px;
-        font-size:15px;
+        font-size:12px;
+        
     }
     .nav a {
         margin:15px;
@@ -293,81 +205,82 @@ div.design2 {
         z-index:3;
     }
     .social a i{
-        font-size: 22px;
+        font-size: 21px;
     }
     .social a{
-        margin: 9px;
+        margin: 7px;
        
     }
 
 }
+
+@media only screen and (max-width: 465px) {
+   
+    .nav a{
+        display:block;
+        width:100%;
+        margin:7px;
+    }
+}
+
 @media only screen and (max-width: 354px) {
+    .logo{
+        text-align:center;
+    }
+    
     .main {
-        padding:0;
+        padding:10px;
     }
     #image{
         width:140px;
         height:140px;
         position:relative;
-        top:55px;
+        top:0px;
     }
     h1{
         position:relative;
-        top:25px;
-        font-size:24px;
+        top:-5px;
+        font-size:20px;
+        margin-right:0;
+        margin-left:0;
+        
     }
     h1:after {
         content:"";
         position: absolute;
         width:40%;
         left: 30%;
-        height: 40px;
+        height: 30px;
         border-bottom: 1px solid rgb(64, 99, 93);
-    }
-    div.design {
-        height:2000px;
-        width: 320px;
-        background-color:rgb(196, 228, 207);
-        transform: rotate(8deg);/*rotation*/
-        position: absolute;
-        z-index:2;
-        top:-400px;
-        bottom:0px;
-        left:-300px;
-    }
-    div.design2 {
-        height: 160px;
-       
     }
     .content p{
         padding-top:10px;
         letter-spacing: 0px;
         word-spacing: 5px;
         font-size:13px;
+        position:relative;
+        bottom:20px;
+    }
+    .nav {
+        position:relative;
+        bottom: 30px;
+        margin-bottom:0;
     }
     .nav a {
-        margin:13px;
+        margin:7px;
         text-decoration: none;
-        font-size: 16px;
+        font-size: 14px;
         color: rgb(17, 71, 64);
     }
     .insta{
-        padding: 4px;
+        padding: 10px;
     }
-    .insta h3 {
-        margin:0;
-        margin-top: -15px;
-        margin-bottom: -15px;
-        text-decoration: underline solid black;
-        font-weight: normal;
+    .insta pre {
+        
         font-size:14px;
     
     }
-    .insta p{
-        margin:0;
-        margin-top:0;
-        font-size:13px;
-    }
+   
     .social a i{
         font-size: 18px;
     }
@@ -380,15 +293,16 @@ div.design2 {
 @media only screen and (max-width: 220px) {
     h1{
         position:relative;
-        top:25px;
-        font-size:20px;
+        top:-5px;
+        font-size:16px;
     }
     h1:after {
         content:"";
         position: absolute;
-        width:40%;
-        left: 30%;
-        height: 20px;
+        width:100%;
+        left: 20%;
+        height: 30px;
+        border-bottom: 1px solid rgb(64, 99, 93);
         display:none;
     }
     .content p{
@@ -396,12 +310,16 @@ div.design2 {
         letter-spacing: 0px;
         word-spacing: 5px;
         font-size:10px;
+        bottom:35px;
+    }
+    .nav {
+        position:relative;
+        bottom: 40px;
+        margin-bottom:0;
     }
     .nav a {
-        margin:13px;
-        text-decoration: none;
+   
         font-size: 12px;
-        color: rgb(17, 71, 64);
     }
     .social a i{
         font-size: 16px;

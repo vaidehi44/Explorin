@@ -16,6 +16,9 @@ body {
     padding: 7px;
     height: 50px;
 }
+.nav div.tabs #nav-box{
+    display:block;
+}
 .nav div.tabs {
     float:right;
     height: 50px;
@@ -27,7 +30,9 @@ body {
     margin: 0;
     padding:0;
     margin-top: -6px;
-
+}
+.nav div.tabs i {
+    display:none;
 }
 
 .tabs a div{
@@ -73,6 +78,7 @@ body {
 .main p{
     margin-left: 50px;
     font-size: 21px;
+    
 }
 ul {
     margin: 55px;
@@ -108,6 +114,7 @@ footer a i{
 div.container {
     margin:0;
     position:relative;
+    z-index:3;
 
 }/*
 div.design {
@@ -122,23 +129,22 @@ div.design {
     right:-300px;
 }*/
 
-div.design2 {
+/*div.design2 {
     height: 200px;
     width: 1500px;
     background-color:rgb(185, 221, 198);
     position: absolute;
     z-index:2;
-    transform: rotate(-3deg);/*rotation*/
+    transform: rotate(-3deg);/*rotation
     bottom: -80px;
     left: -25px;
     display:none;
 
-} 
+} */
 
 @media only screen and (max-width: 880px) {
     .main {
-        position:relative;
-        z-index:100;
+    
         margin: 0;
         padding: 0px;
         width:90%
@@ -167,16 +173,52 @@ div.design2 {
         color: rgb(88, 145, 219);
     }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 650px) {
+    .nav div.tabs{
+        position:absolute;
+        z-index:4;
+        right:0;
+        margin:10px;
+        
+    }
+    .nav div.tabs a{
+        display:block;
+        width:100%;
+        border: 1px solid rgb(192, 209, 200);
+        background-color: rgb(226, 230, 236);
 
-    div.design2 {
-        height: 170px;
-        transform: rotate(-3deg);/*rotation*/
-        bottom: -70px;
-        left: -25px;
-    } 
+    }
+    .nav div.tabs a.current{
+        background-color:rgb(195, 221, 219);
+
+    }    
+
+    .nav div.tabs #nav-box{
+        display:none;
+    }
+    .nav div.tabs i{
+        display:block;
+        float:right;
+        margin-right:10px;
+        margin-top:10px;
+
+    }
+    .nav div.tabs a{
+        margin-top:0px;        
+    }
+    footer a i{
+        font-size: 25px;
+    }
+    footer a{
+        margin: 18px;
+       
+    }
+}
+@media only screen and (max-width: 530px) {
+
+   
     .main {
-        position:relative;
+        
         margin: 0;
         padding: 0px;
         padding-right:0;
@@ -219,7 +261,7 @@ div.design2 {
     }
 
     footer a i{
-        font-size: 20px;
+        font-size: 25px;
     }
     footer a{
         margin: 12px;
@@ -227,4 +269,71 @@ div.design2 {
     }
   
 }
+
+
+@media only screen and (max-width: 530px) {
+
+    .main {
+        
+        display:flex;
+        flex-direction:column;
+        word-wrap:break-word;
+        padding-right: 20px;
+
+    }
+    .main h1 {
+        margin:25px;
+        margin-bottom: 5px;
+        font-weight:normal;
+        font-size:21px;
+    }
+    
+    .main p{
+        margin-left: 25px;
+        font-size: 13px;
+    }
+    .main ul {
+        width:90%;
+        margin-left: 0px;
+        margin-top:10px;
+
+    }
+    
+    li {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    span {
+        color: rgb(88, 145, 219);
+    }
+    footer {
+        padding: 20px;
+        padding-bottom:30px;
+        padding-top:0;
+
+    }
+
+    footer a i{
+        font-size: 18px;
+    }
+    footer a{
+        margin: 8px;
+       
+    }
+ 
+  
+}
+
+
+@media only screen and (max-width: 240px) {
+    footer a i{
+        font-size: 16px;
+    }
+    footer a{
+        margin: 20px;
+       
+    }
+}
+
+
 

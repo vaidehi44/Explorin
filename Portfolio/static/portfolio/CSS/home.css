@@ -111,8 +111,7 @@ div.design2 {
     background-color: rgb(199, 221, 216);
     padding:10px;
     text-align:center;
-    
-
+    z-index:10;
 }
 .insta b {
     font-size:20px;
@@ -121,13 +120,19 @@ div.design2 {
 }
 .insta pre{
     font-size:15px;
-    margin:0;
+    margin-top:0;
+    margin-bottom:0;
+    line-height:20px;
 }
-.insta a{
+.insta small{
+    font-size:12px;
+    margin-top:0;
+}
+.insta pre a{
     text-decoration:none;
     color:rgb(72, 72, 138);
 }
-.insta a:hover {
+.insta pre a:hover {
     text-decoration:none;
     color:rgb(109, 155, 199);
 }
@@ -153,13 +158,10 @@ div.design2 {
     }
     .insta pre{
         white-space:initial;
-        font-size: 10px;
+        font-size: 15px;
     }
     .insta b {
         font-size:17px;
-    }
-    .insta pre{
-        font-size:15px;
     }
 
     #image{
